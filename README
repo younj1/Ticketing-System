@@ -1,0 +1,63 @@
+# IT Help Desk Ticketing System
+
+A full-stack web application built with the MERN stack that replicates 
+core functionality found in enterprise help desk tools like ServiceNow 
+and Jira Service Management.
+
+## Tech Stack
+
+- **Frontend:** React (Vite), Axios
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB, Mongoose
+- **Tools:** Postman, MongoDB Compass, nodemon
+
+## Features
+
+- Create tickets with title, description, requester, category, and priority
+- Auto-generated ticket IDs (TKT-0001 format)
+- Status workflow: Open → In Progress → Resolved → Closed
+- Priority levels: Low, Medium, High, Critical
+- Add timestamped technician notes to any ticket
+- Live dashboard showing Open, In Progress, Critical, and Resolved counts
+- Search by ticket ID, title, or requester
+- Filter by status and priority
+
+## Setup Instructions
+
+### Prerequisites
+- Node.js (LTS)
+- MongoDB Community Server running locally on port 27017
+
+### Backend
+```bash
+cd backend
+npm install
+npx nodemon server.js
+```
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open http://localhost:5173 in your browser.
+
+## API Endpoints
+
+| Method | Route | Description |
+|--------|-------|-------------|
+| GET | /api/tickets | Return all tickets |
+| GET | /api/tickets/:id | Return single ticket |
+| POST | /api/tickets | Create a new ticket |
+| PUT | /api/tickets/:id | Update status, priority, or add note |
+| DELETE | /api/tickets/:id | Delete a ticket |
+
+## Certification Alignment
+
+- **CompTIA Security+** — REST API authentication concepts, input validation
+- **CompTIA Network+** — HTTP methods, client-server communication
+- **Splunk Core** — Structured data fields, ticket lifecycle as log events
+
+![alt text](image.png)
